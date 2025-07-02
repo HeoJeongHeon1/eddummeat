@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>으뜸 육회</title>
+    <link rel="stylesheet" href="css/index.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Single+Day&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+</head>
+<body>
+
+
+    <!-- nav -->
+    <header class="navbar">
+    <div class="navbar-container">
+        <div class="logo"><a href="index.html">으뜸육회</a></div>
+        <nav class="menu">
+        <a href="#first-banner">브랜드</a>
+        <a href="#profit-section">가맹정보</a>
+        <a href="#menu-section">메뉴</a>
+        <a href="#interior-section">인테리어</a>
+        <a href="#enter">가맹가입절차</a>
+        <a href="#contact-section">상담문의</a>
+        </nav>
+    </div>
+    </header>
+
+
+    <!-- 가맹문의 버튼 -->
+    <a href="#contact-section" class="fixed-consult-btn">
+        <img src="img/contact-btn2.png" alt="가맹문의" />
+    </a>
+
+
+    <!-- 팝업 배경 -->
+    <div id="popupOverlay" class="popup-overlay"></div>
+
+    <!-- 팝업창 -->
+    <div id="popup" class="popup">
+    <img src="img/logo.png" alt="">
+    <h2>13호점달성!!</h2>
+    <div class="branch-list">
+        <!-- 호점 항목들, 여기 원하는 내용으로 수정 가능 -->
+        <div class="branch-item">1호점 <br>대구 진천본점</div>
+        <div class="branch-item">2호점 <br>대구 현풍테크노폴리스점</div>
+        <div class="branch-item">3호점 <br>대구 성서점</div>
+        <div class="branch-item">4호점 <br>대구 감삼점</div>
+        <div class="branch-item">5호점 <br>대구 북구점</div>
+        <div class="branch-item">6호점 <br>대구 수성점</div>
+        <div class="branch-item">7호점 <br>대구 율하점</div>
+        <div class="branch-item">8호점 <br>부산 사상점</div>
+        <div class="branch-item">9호점 <br>대구 시지점</div>
+        <div class="branch-item">10호점 <br>대구 칠곡점</div>
+        <div class="branch-item">11호점 <br>부산 하단점</div>
+        <div class="branch-item">12호점 <br>부산 서면점</div>
+        <div class="branch-item other-color">13호점 <br>울산달동 상권심사</div>
+    </div>
+    <div class="popup-footer">
+        <label class="dont-show">
+        <input type="checkbox" id="dontShow24h">
+        24시간 동안 보지 않기
+        </label>
+        <button id="popupCloseBtn" class="popup-close-btn">닫기</button>
+    </div>
+    </div>
+
+
+
+    <!-- 배너 -->
+    <section class="simple-slider" id="first-banner">
+    <img src="img/banner/banner1.jpg" class="slider-image active" />
+    <img src="img/banner/banner2.jpg" class="slider-image" />
+    <img src="img/banner/banner3.jpg" class="slider-image" />
+    </section>
+
+    <!-- 롤링 배너 -->
+    <section class="rolling-banner">
+    <div class="rolling-track">
+        <div class="rolling-text">
+        한우뭉티기 한우차돌박이사시미 한우육회 한우양지오드레기 한우육사시미 소곱창전골 노르웨이생연어 한우소고기무국 한우뭉티기 한우차돌박이사시미 한우육회 한우양지오드레기 한우육사시미 소곱창전골 노르웨이생연어 한우소고기무국 한우뭉티기 한우차돌박이사시미 한우육회 한우양지오드레기 한우육사시미 소곱창전골 노르웨이생연어 한우소고기무국
+        </div>
+        <!-- 한우뭉티기 한우차돌박이사시미 한우육회 한우양지오드레기 한우육사시미 소곱창전골 노르웨이생연어 한우소고기무국 -->
+    </div>
+    </section>
+
+
+    <!-- 수익성 -->
+    <section class="section profit-section" id="profit-section">
+        <div class="profit-title">
+        <h2><span class="brand">으뜸육회</span> 수익성</h2>
+        <p>남녀노소 사랑받는 메뉴 구성과 평일·주말 구분 없는 매출액으로 수익성을 증명합니다.</p>
+        </div>
+
+        <div class="profit-images">
+        <img src="img/sales.jpg" alt="수익 설명 1" class="profit-image" />
+        <img src="img/table.jpg" alt="수익 설명 2" class="profit-image" />
+        </div>
+    </section>
+
+
+    <!-- 주요 가맹점 -->
+    <section class="section franchise-profit-section">
+        <div class="profit-info">
+        <h2>닭동가리 주요 가맹점</h2>
+        <p>평균 순이익 공개</p>
+        <p class="sub">당연히 본점(직영점)은 제외 가맹점 매출입니다!</p>
+
+        <div class="highlight-image-group">
+            <img src="img/profit.jpg" alt="22,300,000원" class="highlight-image" />
+        </div>
+        </div>
+
+        <ul class="receipt-list">
+        <li><img src="img/bills/bills1.png" alt="대구 A점" /></li>
+        <li><img src="img/bills/bills2.png" alt="대구 B점" /></li>
+        <li><img src="img/bills/bills3.png" alt="대구 C점" /></li>
+        </ul>
+    </section>
+
+
+    <section class="section franchise-profit-section">
+        <div class="profit-info">
+        <h2 class="sales-change">으뜸육회와 함께라면 "수익"이 달라집니다!</h2>
+
+        <div class="highlight-image-group">
+            <img src="img/sales_change.png" alt="매출증대" class="highlight-image" />
+            <img src="img/sales_change2.png" alt="매출증대표" class="highlight-image" />
+        </div>
+        </div>
+
+        <span>※ 업종변경 시 최소비용으로 창업 도와드립니다.</span>
+
+    </section>
+
+
+
+    <section class="section menu-section" id="menu-section">
+    <h2 class="menu-title">으뜸육회 <span class="highlight">메뉴</span></h2>
+
+    <div class="menu-grid">
+        <div class="menu-item">
+        <img src="img/menu/1.jpg" alt="닭동가리통닭">
+        <p>닭동가리통닭</p>
+        </div>
+        <div class="menu-item">
+        <img src="img/menu/2.jpg" alt="팔당오징어">
+        <p>팔당오징어</p>
+        </div>
+        <div class="menu-item">
+        <img src="img/menu/3.jpg" alt="빨간오뎅탕">
+        <p>빨간오뎅탕</p>
+        </div>
+        <div class="menu-item">
+        <img src="img/menu/3.jpg" alt="빨간오뎅탕">
+        <p>빨간오뎅탕</p>
+        </div>
+        <!-- 필요한 만큼 메뉴 아이템을 추가하면 됨 -->
+    </div>
+
+    <div class="menu-button-wrap">
+        <button class="view-all-menu-btn">전체메뉴보기 +</button>
+    </div>
+    </section>
+
+    <!-- 팝업 레이어 -->
+    <div class="menu-popup" id="menuPopup">
+    <div class="popup-content">
+        <button class="popup-close">&times;</button>
+        <img src="img/menu2.png" alt="전체메뉴 이미지">
+    </div>
+    </div>
+
+
+    <!--  -->
+    <section class="section interior-section" id="interior-section">
+    <div class="interior-content">
+        <div class="interior-text">
+        <h2><span class="bold">으뜸육회</span> 인테리어 디자인</h2>
+        <p class="highlight">1980년대 포장마차 분위기</p>
+        <p class="desc">
+            1980년대 포장마차 분위기를 재현한 인테리어 디자인으로<br>
+            부담없이 술을 즐기며 대화하기 좋은 공간을 조성했습니다.<br>
+            외부간판과 호박등, 타일, 꽃무늬 벽지, 다양한 소품등을 활용하여<br>
+            과거로 온듯한 느낌을 연출했습니다.
+        </p>
+        </div>
+
+        <div class="interior-slider swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="img/interrior/1.jpg" alt="인테리어1"></div>
+            <div class="swiper-slide"><img src="img/interrior/2.jpg" alt="인테리어2"></div>
+            <div class="swiper-slide"><img src="img/interrior/3.jpg" alt="인테리어3"></div>
+            <div class="swiper-slide"><img src="img/interrior/4.jpg" alt="인테리어3"></div>
+
+        </div>
+        <div class="swiper-pagination"></div>
+        </div>
+    </div>
+    </section>
+
+
+    <!-- 가맹가입절차 -->
+    <section id="enter", class="section enter">
+        <img src="img/enter.png" alt="가입절차 이미지">
+    </section>
+
+    <!-- 창업비용안내 -->
+    <section id="cost-section", class="section cost-section">
+        <h2><span class="red-text">으뜸육회</span> 가맹<br>
+            창업비용 안내
+        </h2>
+        <div class="content-table"><img src="img/table2.png" alt="가입절차 이미지"></div>
+        
+    </section>
+
+
+    <!-- 창업문의 -->
+    <section id="contact-section" class="section contact-section">
+    <form id="inquiry-form">
+        <h1><span class="highlight">으뜸육회</span> 창업문의</h1>
+
+        <label>성함*</label>
+        <input type="text" name="name" required />
+
+        <label>전화번호*</label>
+        <div class="phone-group">
+        <input type="text" name="phone1" required placeholder="010" />
+        <input type="text" name="phone2" required />
+        <input type="text" name="phone3" required />
+        </div>
+
+        <label>이메일*</label>
+        <div class="email-group">
+        <input type="text" name="emailId" required />
+        <span>@</span>
+        <input type="text" name="emailDomain" required />
+        </div>
+
+        <div class="radio-group">
+        <label>점포유무*</label>
+        <label><input type="radio" name="store" value="있음" required /> 있음</label>
+        <label><input type="radio" name="store" value="없음" /> 없음</label>
+        </div>
+
+        <label>창업 희망 지역*</label>
+        <input type="text" name="region" required />
+
+        <label>창업 희망 비용*</label>
+        <input type="text" name="budget" required />
+
+        <label>인지경로*</label>
+        <select name="source" required>
+        <option value="">인지경로 선택</option>
+        <option value="SNS">SNS</option>
+        <option value="지인소개">지인소개</option>
+        <option value="검색">검색</option>
+        </select>
+
+        <div class="checkbox-group">
+        <label>연령대*</label>
+        <label><input type="checkbox" name="age" value="20대" /> 20대</label>
+        <label><input type="checkbox" name="age" value="30대" /> 30대</label>
+        <label><input type="checkbox" name="age" value="40대" /> 40대</label>
+        <label><input type="checkbox" name="age" value="50대" /> 50대</label>
+        </div>
+
+        <div class="radio-group">
+        <label>프렌차이즈 경험*</label>
+        <label><input type="radio" name="franchise" value="있음" required /> 있음</label>
+        <label><input type="radio" name="franchise" value="없음" /> 없음</label>
+        </div>
+
+        <label>제목*</label>
+        <input type="text" name="subject" required />
+
+        <label>내용*</label>
+        <textarea name="message" required></textarea>
+
+        <div class="agree-policy">
+        <input type="checkbox" id="agree" />
+        <label for="agree">개인정보취급방침에 동의합니다.</label>
+        </div>
+
+        <button type="submit" id="submitBtn">창업문의 바로신청 GO</button>
+    </form>
+    </section>
+
+
+
+    <!-- ====== Footer ====== -->
+    <footer class="site-footer">
+    <!-- 상단 링크 -->
+
+    <!-- 메인 콘텐츠 -->
+    <div class="footer-content">
+        <!-- 왼쪽 회사 정보 -->
+        <div class="footer-info">
+        <p>
+            (주) 으뜸육회&nbsp;&nbsp; 대표이사 홍길동&nbsp;&nbsp; <br>
+            대구광역시 수성구 용학로 115, 1동(두산동)&nbsp;&nbsp; <br>
+            사업자등록번호 373-85-02112&nbsp;&nbsp; <br>
+            Tel. 053-792-0382&nbsp;&nbsp;
+            Fax. 053-792-3820&nbsp;&nbsp;
+            Email. oneteam_corp@naver.com
+        </p>
+        <p>COPYRIGHT © 으뜸육회. All Rights Reserved.</p>
+        </div>
+
+        <!-- 오른쪽 가맹문의 -->
+        <div class="footer-contact">
+        <a href="#contact-section" class="franchise-inquiry">가맹문의 1899-0774</a>
+        </div>
+    </div>
+    </footer>
+
+
+
+
+
+    <script src="'https://cdn.emailjs.com/dist/email.min.mjs'"></script>
+    <!-- <script src="js/contact.js"></script> -->
+    <script src="js/popup.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/slider.js"></script>
+    <script src="js/bills.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="js/interrior.js"></script>
+
+</body>
+
+
+
+
+</html>
