@@ -1,3 +1,36 @@
+
+
+@font-face {
+    font-family: '행복고흥M';
+    src: url('../fonts/행복고흥M.woff2') format('woff2'),
+        url('../fonts/행복고흥M.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+
+@font-face {
+    font-family: '행복고흥2B';
+    src: url('../fonts/행복고흥2B.woff2') format('woff2'),
+        url('../fonts/행복고흥2B.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+#brandname {
+  font-family: '행복고흥M', sans-serif;
+  line-height: 0.8;
+  font-size:1.8em;
+  position: relative;
+  top: 0.2em; /* 아래로 3px 내려감 */
+}
+
+
 * {
   margin: 0;
   padding: 0;
@@ -18,6 +51,7 @@ html {
 }
 
 .navbar {
+  background-color: white;
   position: fixed;
   top: 0;
   width: 100%;
@@ -96,7 +130,7 @@ html {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 40%;
+  width: 70%;
   max-width: 90vw;
   max-height: 80vh;
   background: #850101;  /* 진한 파랑 */
@@ -124,31 +158,49 @@ html {
   margin: 0 auto;
 }
 
+
 /* 호점 리스트 */
 .branch-list {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px 15px;
+  grid-template-columns: repeat(3, 1fr);  /* ✅ 3개씩 한 줄 */
+  gap: 15px 20px;
   margin-bottom: 1.5rem;
 }
 
 .branch-item {
-  background: #ffffff; /* 노란색 */
-  color: #000000; /* 진한 파랑 */
-  font-weight: 700;
-  padding: 10px;
+  background: #ffffff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
   text-align: center;
-  border-radius: 5px;
-  box-shadow: 1px 1px 5px rgba(0,0,0,0.2);
-  cursor: default;
-  user-select: none;
-  font-size: 1em;
+  transition: transform 0.2s;
 }
 
-.other-color {
-  background: #FFD700; /* 노란색 */
-  color: #000000; /* 진한 파랑 */
+.branch-item:hover {
+  transform: translateY(-5px);
 }
+
+.branch-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-bottom: 1px solid #eee;
+}
+
+.branch-item p {
+  margin: 0;
+  padding: 10px;
+  color: #000;
+  font-weight: bold;
+  font-size: 0.95em;
+}
+
+.branch-item.other-color {
+  border: 3px solid #FFD700;
+}
+
+
+
 
 /* 하단 푸터 */
 .popup-footer {
@@ -338,7 +390,7 @@ html {
 
 .profit-info h2 {
   font-size: 3em;
-  color: #92a9f5;
+  color: #ffbd14;
 }
 
 .profit-info p {
@@ -405,10 +457,11 @@ html {
 }
 
 .menu-title {
-  font-size: 2.5em;
-  margin-bottom: 2em;
+  font-size:3em !important;
+  margin-bottom: 1em;
   color:rgb(147, 8, 8);
 }
+
 
 .highlight {
   color: #000000;
@@ -472,18 +525,20 @@ html {
 
 .popup-content {
   position: relative;
-  background-color: white;
+  background-color: rgb(0, 0, 0);
   padding: 1em;
   border-radius: 1em;
   max-width: 90%;
   max-height: 90%;
   overflow: auto;
+  color:white;
 }
 
 .popup-content img {
   width: 100%;
   height: auto;
   display: block;
+  margin-top:1em;
 }
 
 .popup-close {
@@ -494,6 +549,7 @@ html {
   border: none;
   font-size: 2em;
   cursor: pointer;
+  color:white;
 }
 
 
@@ -777,4 +833,65 @@ button[type="submit"]:enabled {
 }
 .site-footer .franchise-inquiry:hover {
   text-decoration: underline;
+}
+
+
+
+/* 리뷰 */
+
+.review-section {
+  padding: 3em 1em;
+  background-color: #1f1a17; /* 어두운 배경 */
+  color: white;
+  font-family: 'Pretendard', sans-serif;
+  padding-bottom:4em;
+}
+
+.review-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25em, 1fr));
+  gap: 2em;
+  max-width: 75em;
+  margin: 0 auto;
+}
+
+.review-card {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1em;
+  border-radius: 1em;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.review-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 1em;
+  border: 2px solid white;
+}
+
+.review-content .stars {
+  color: gold;
+  font-size: 1.1em;
+  margin-bottom: 0.5em;
+}
+
+.review-content p {
+  line-height: 1.4;
+  font-size: 0.95em;
+}
+
+.review-title {
+  font-size:3em;
+  color:rgb(168, 3, 3);
+  text-align: center;
+  margin-bottom:1.5em;
+  margin-top:0.5em;
+}
+
+.white-color {
+  color:white;
 }
