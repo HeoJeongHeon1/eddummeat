@@ -27,6 +27,12 @@
   line-height: 0.8;
   font-size:1.8em;
   position: relative;
+  color:#850101;
+  text-shadow:
+  -1px -1px 0 #fff,
+    1px -1px 0 #fff,
+  -1px  1px 0 #fff,
+    1px  1px 0 #fff;  /* 흰색 외곽선 */
   top: 0.2em; /* 아래로 3px 내려감 */
 }
 
@@ -180,9 +186,14 @@ html {
   transform: translateY(-5px);
 }
 
+.branch-item a{
+  text-decoration: none;
+}
+
 .branch-item img {
   width: 100%;
-  height: auto;
+  height:7em;
+  object-fit: cover;  /* 🔥 핵심 */
   display: block;
   border-bottom: 1px solid #eee;
 }
@@ -383,6 +394,7 @@ html {
   color:rgb(223, 12, 12);
   font-weight:bold;
 }
+
 
 .franchise-profit-section .sales-change {
   margin-bottom:2em;
@@ -608,7 +620,7 @@ html {
 }
 
 .interior-slider .swiper-slide img {
-  width: 100%;
+  width: 80%;
   height: auto;
   border-radius: 0.5em;
 }
