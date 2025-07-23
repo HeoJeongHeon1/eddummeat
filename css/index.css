@@ -1048,7 +1048,7 @@ button[type="submit"]:enabled {
 
 .review-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(25em, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(25em, 1fr));
   gap: 2em;
   max-width: 75em;
   margin: 0 auto;
@@ -1323,7 +1323,7 @@ img {
 
   .review-section h2 {
     display: flex;
-    flex-direction: column; /* 세로 정렬 */
+    flex-direction: column; 
     align-items: center;
     text-align: center;
     gap: 0.5em;
@@ -1332,7 +1332,7 @@ img {
   }
 
   .review-card {
-    width:95%;
+    width:90%;
   }
 
   .review-content {
