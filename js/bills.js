@@ -5,7 +5,7 @@ const observer = new IntersectionObserver((entries) => {
     if (entry.isIntersecting) {
       setTimeout(() => {
         entry.target.classList.add('show');
-      }, index * 300); // 순차적으로 등장 (0.3초 간격)
+      }, index * 600); // 순차적으로 등장 (0.3초 간격)
     }
   });
 }, {

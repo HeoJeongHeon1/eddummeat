@@ -1,5 +1,3 @@
-
-
 @font-face {
     font-family: '행복고흥M';
     src: url('../fonts/행복고흥M.woff2') format('woff2'),
@@ -20,6 +18,14 @@
     font-style: normal;
     font-display: swap;
 }
+
+@font-face {
+    font-family: 'BMEULJIRO';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/BMEULJIRO.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 
 
 #brandname {
@@ -57,7 +63,8 @@ html {
 }
 
 .navbar {
-  background-color: white;
+  background-color: rgb(0, 0, 0);
+  color:white;
   position: fixed;
   top: 0;
   width: 100%;
@@ -70,6 +77,11 @@ html {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.logo-image {
+  height: 1.5em;     /* 필요 시 조절 가능 */
+  display: block;
 }
 
 
@@ -96,14 +108,45 @@ html {
   margin-left: 1.5em;
   font-size : 1.3em;
   text-decoration: none;
-  color: black;
+  color: rgb(255, 255, 255);
   font-weight: 500;
 }
 
 .navbar.scrolled {
-  background-color: white;
+  background-color: rgb(0, 0, 0);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
+
+
+/* 반응형 */
+@media (max-width: 768px) {
+  .navbar-container {
+    flex-direction: column;
+    align-items: flex-start;
+    align-items: center;  /* 왼쪽 → 가운데로 변경 */
+  }
+
+  .menu {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);  /* 1줄에 2개 */
+    width: 100%;
+    gap: 0.5em 1em;
+    padding: 1em 0 0 1em;
+    text-align: center;
+  }
+
+  .menu a {
+    margin-left: 0;
+    font-size: 1.1em;
+  }
+
+  .logo {
+    padding-left: 0.5em;
+    margin-bottom: 0.5em;
+  }
+
+}
+
 
 
 
@@ -153,9 +196,17 @@ html {
 
 .popup h2 {
   font-size: 3em;
-  margin:0.8em auto;
+  margin:0.1em auto;
   font-weight: bold;
   text-align: center;
+}
+
+.popup .popup-desc{
+  font-size : 1.3em;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom:2em;
+  margin-top:2em;
 }
 
 .popup img {
@@ -203,7 +254,7 @@ html {
   padding: 10px;
   color: #000;
   font-weight: bold;
-  font-size: 0.95em;
+  font-size: 1.1em;
 }
 
 .branch-item.other-color {
@@ -250,7 +301,7 @@ html {
 
 /* 배너 */
 .simple-slider {
-    margin-top:5em;
+    margin-top : 5em;
     width: 100%;
     height: 40em;
     position: relative;
@@ -298,13 +349,43 @@ html {
 }
 
 
+/* 반응형: 태블릿 이하 */
+@media (max-width: 1024px) {
+  .fixed-consult-btn {
+    top: auto;
+    bottom: 2em;
+    right: 1.5em;
+    width: 10em;
+  }
+}
+
+/* 반응형: 모바일 */
+@media (max-width: 600px) {
+  .fixed-consult-btn {
+    bottom: 1.5em;
+    right: 1em;
+    width: 8em;
+  }
+  .slide-target,
+  .slide-left,
+  .slide-right,
+  .slide-in-left,
+  .slide-in-right {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+}
+
+
 
 /* 롤링 배너 */
 .rolling-banner {
   width: 100%;
   background-color: #5f0808;
   overflow: hidden;
-  height: 4em;
+  height: 5em;
   display: flex;
   align-items: center;
   color:aliceblue;
@@ -317,13 +398,89 @@ html {
 }
 
 .rolling-text {
-  font-size: 1.8em;
+  font-size: 1.4em;
   font-weight: bold;
-  color: #fce98e;
   color:aliceblue;
   letter-spacing: 0.15em;
   padding-right: 4em; /* 끝 간격을 주어 부드러운 연결 */
 }
+
+
+/* 반응형: 모바일 */
+@media (max-width: 600px) {
+
+  .simple-slider {
+    margin-top : 10em;
+    height: 20em;
+  }
+
+  .rolling-banner {
+    height: 3em;
+    font-size: 0.8em;
+  }
+
+  .profit-title h2 {
+    display: flex;
+    flex-direction: column; /* 세로 정렬 */
+    align-items: center;
+    text-align: center;
+    gap: 0.5em;
+    font-size : 3em !important;
+  }
+
+
+  .profit-title p {
+    font-size : 1em !important;
+  }
+
+  .profit-images img {
+    width:100%;
+  }
+
+  .profit-info h2 {
+    display: flex;
+    flex-direction: column; /* 세로 정렬 */
+    align-items: center;
+    text-align: center;
+    gap: 0.5em;
+    font-size : 3em !important;
+  }
+
+
+  .highlight-image-group img {
+    width : 100%;
+    padding-top : 0.5em;
+  }
+
+  .franchise-profit-section .receipt-list {
+    margin-top:1em;
+  }
+
+  .franchise-profit-section .receipt-list li {
+    width : 100%;
+  }
+
+  .menu-section {
+    padding:0;
+    padding-top : 1em;
+
+  }
+
+
+  .menu-section h2 {
+    display: flex;
+    flex-direction: column; /* 세로 정렬 */
+    align-items: center;
+    text-align: center;
+    gap: 0.5em;
+    font-size : 3em !important;
+  }
+
+
+}
+
+
+
 
 /* 애니메이션 */
 @keyframes roll-left {
@@ -341,9 +498,13 @@ html {
 /* 수익설명 */
 .profit-section {
   background-color: #000;
-  padding: 4em 2em;
+  padding: 6em 2em;
   color: white;
   text-align: center;
+}
+
+.profit-section h2 {
+  padding-top:0.5em;
 }
 
 .profit-title h2 {
@@ -387,6 +548,7 @@ html {
   color: white;
   text-align: center;
   position: relative;
+  padding-bottom:6em;
 }
 
 .franchise-profit-section span {
@@ -414,7 +576,6 @@ html {
 .profit-info .sub {
   font-size: 1em;
   color: #ccc;
-  margin-bottom: 2em;
 }
 
 .highlight-image-group {
@@ -423,7 +584,7 @@ html {
 }
 
 .highlight-image {
-  width: 80%;
+  width: 70%;
 }
 
 .speech-bubble {
@@ -468,15 +629,17 @@ html {
   text-align: center;
 }
 
+
+
 .menu-title {
-  font-size:3em !important;
   margin-bottom: 1em;
-  color:rgb(147, 8, 8);
+  color : #ffbd14;
 }
 
 
 .highlight {
   color: #000000;
+  color: #850101;
 }
 
 
@@ -490,6 +653,8 @@ html {
 }
 
 
+
+
 .menu-item img {
   width: 20em;
   height: auto;
@@ -498,7 +663,8 @@ html {
 
 .menu-item p {
   margin-top: 0.5em;
-  font-size: 1em;
+  font-size: 1.3em;
+  font-weight:bold;
 }
 
 /* 전체메뉴 보기 버튼 */
@@ -509,7 +675,8 @@ html {
 .view-all-menu-btn {
   background-color: rgb(147, 8, 8);;
   color: white;
-  font-size: 1em;
+  font-size: 1.4em;
+  font-weight:bold;
   padding: 0.8em 2em;
   border: none;
   border-radius: 2em;
@@ -540,8 +707,8 @@ html {
   background-color: rgb(0, 0, 0);
   padding: 1em;
   border-radius: 1em;
-  max-width: 90%;
-  max-height: 90%;
+  max-width: 60%;
+  max-height: 80%;
   overflow: auto;
   color:white;
 }
@@ -571,7 +738,7 @@ html {
 .interior-section {
   background-color: #000000;
   color: white;
-  padding: 4em 2em;
+  padding: 5em 2em;
 }
 
 .interior-content {
@@ -594,6 +761,7 @@ html {
 .interior-text h2 {
   font-size: 2.5em;
   margin-bottom: 0.5em;
+  line-height: 1.4;
 }
 
 .interior-text .bold {
@@ -620,7 +788,7 @@ html {
 }
 
 .interior-slider .swiper-slide img {
-  width: 80%;
+  width: 90%;
   height: auto;
   border-radius: 0.5em;
 }
@@ -629,18 +797,28 @@ html {
 
 /* 가입절차 */
 
-.enter{
+.enter-title{
+  text-align: center;
+}
+
+.enter-section{
   background-color: #000000;
+}
+
+.enter-section h2{
+  color:#ffbd14;
+  padding-top:1em;
+}
+
+.enter-table {
   display: flex;
   justify-content: center; /* 가로 가운데 */
   align-items: center;     /* 세로 가운데 */
-  /* height: 100vh;           화면 높이 기준 */
 }
 
-.enter img{
+.enter-section .enter-table img{
   text-align: center;
-  width:75%;
-
+  width:80%;
 }
 
 
@@ -657,7 +835,7 @@ html {
   align-items: center;     /* 세로 가운데 */
 }
 
-.cost-section img{
+.cost-section .content-table img{
   text-align: center;
   width:80%;
 
@@ -665,7 +843,7 @@ html {
 
 .cost-section h2 {
   padding-top:2em;
-  color:white;
+  color:#ffbd14;
   font-size:4em;
   text-align:center;
 }
@@ -686,10 +864,15 @@ html {
   padding: 0;
 }
 
+.contact-section h2 {
+  text-align: center;
+  padding-top : 2em;
+}
+
 #inquiry-form {
-  width: 40%;
+  width: 50%;
   margin: 0 auto;
-  padding: 2em;
+  padding: 3em;
   background: #000000aa;
   border-radius: 10px;
 }
@@ -801,7 +984,7 @@ button[type="submit"]:enabled {
   color: #fff;
   padding: 4em 4em;
   font-family: Pretendard, sans-serif;
-  font-size: 0.875em;
+  font-size: 1em;
   line-height: 1.6;
 }
 .site-footer .footer-links {
@@ -838,7 +1021,7 @@ button[type="submit"]:enabled {
 }
 .site-footer .franchise-inquiry {
   display: inline-block;
-  font-size: 1.25em;
+  font-size: 2em;
   font-weight: bold;
   color: #fff;
   text-decoration: none;
@@ -857,6 +1040,10 @@ button[type="submit"]:enabled {
   color: white;
   font-family: 'Pretendard', sans-serif;
   padding-bottom:4em;
+}
+
+.review-section h2 {
+  color : #ffbd14;
 }
 
 .review-container {
@@ -906,4 +1093,384 @@ button[type="submit"]:enabled {
 
 .white-color {
   color:white;
+}
+
+
+h2 {
+  font-family: 'BMEULJIRO' !important;
+  font-weight: normal;
+  font-size:5em !important;
+  color : #ffbd14;
+}
+
+
+
+/* 로고 설정 */
+
+.logo-img {
+  height: 1.2em;     /* 텍스트와 어울리게 조절 */
+  vertical-align: middle;
+  margin-right: 0.2em;
+}
+
+
+.interior-text h2{
+  font-size:4em !important;
+}
+
+
+
+/* 🎨 팝업창 2 레이아웃 */
+.custom-popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.custom-popup.active {
+  display: flex;
+}
+
+.custom-popup-content {
+  background: #850101;
+  padding: 2em;
+  border-radius: 1rem;
+  text-align: center;
+  width: 90%;
+  max-width: 500px;
+  position: relative;
+  font-family: 'Nanum Gothic', sans-serif;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.custom-popup-content h2 {
+  font-size: 1.7em;
+  color: #ffffff;
+  margin-bottom: 0.5em;
+  margin-top:0.5em;
+  font-weight:bold;
+}
+
+.custom-popup-content p {
+  font-size: 1.4em;
+  margin: 0.3em 0;
+  font-weight:bold;
+  color: #fefefe;
+}
+
+.custom-popup-close {
+  position: absolute;
+  top: 0.6em;
+  right: 0.8em;
+  background: none;
+  border: none;
+  font-size: 2em;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.custom-popup-footer {
+  margin-top: 1.5em;
+  font-size: 1.1em;
+  color: #ffffff;
+}
+
+
+.popup2-img {
+  width : 100%;
+}
+
+
+/* 애니메이션 */
+.slide-target {
+  display: inline-block;
+  opacity: 0;
+  transform: translateX(0); /* 기본 초기값 */
+}
+
+/* 왼쪽에서 시작 */
+.slide-left {
+  transform: translateX(-100%);
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.slide-in-left {
+  animation: slideInLeft 0.8s ease-out forwards;
+}
+
+/* 오른쪽에서 시작 */
+.slide-right {
+  transform: translateX(100%);
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.slide-in-right {
+  animation: slideInRight 0.8s ease-out forwards;
+}
+
+/* 위쪽에서 시작 */
+.slide-top {
+  transform: translateY(-100%);
+}
+
+@keyframes slideInTop {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.slide-in-top {
+  animation: slideInTop 0.8s ease-out forwards;
+}
+
+.fade-target {
+  opacity: 0;
+  transition: opacity 0.8s ease-out;
+}
+
+.fade-in {
+  opacity: 1;
+}
+
+
+
+
+/* 반응형 */
+
+/* 💡 모든 요소의 박스 사이징 정리 */
+* {
+  box-sizing: border-box;
+}
+
+/* 💡 뷰포트 너비 초과 방지 */
+html, body {
+  overflow-x: hidden; 
+  max-width: 100%;
+}
+
+/* 💡 공통 레이아웃 반응형 처리 */
+.container, .wrapper, .main, body > div {
+  max-width: 100%;
+  width: 100%;
+}
+
+/* 💡 이미지 반응형 */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* 💡 고정 width 제한 */
+@media (max-width: 768px) {
+  .your-fixed-width-class {
+    width: 100% !important;
+    padding: 0 16px;
+  }
+}
+
+
+
+
+
+/* 반응형: 모바일 */
+@media (max-width: 600px) {
+
+  .receipt-list li {
+    width : 10em;
+  }
+
+  .menu-grid {
+    margin:0;
+  }
+
+
+  .menu-item p {
+    font-size: 1em;
+  }
+
+  .view-all-menu-btn {
+    font-size: 1.1em;
+  }
+
+  .review-section h2 {
+    display: flex;
+    flex-direction: column; /* 세로 정렬 */
+    align-items: center;
+    text-align: center;
+    gap: 0.5em;
+    font-size : 3em !important;
+    margin-bottom:1em;
+  }
+
+  .review-card {
+    width:95%;
+  }
+
+  .review-content {
+    font-size:1em;
+  }
+
+
+  .enter-section p{
+    display: none;
+  }
+
+  .enter-section h2 {
+    display: flex;
+    flex-direction: column; /* 세로 정렬 */
+    align-items: center;
+    text-align: center;
+    gap: 0.5em;
+    font-size : 3em !important;
+  }
+
+  .enter-table {
+    width:100%;
+    padding-top:1em;
+  }
+
+  .cost-section h2 {
+    display: flex;
+    flex-direction: column; /* 세로 정렬 */
+    align-items: center;
+    text-align: center;
+    gap: 0.5em;
+    font-size : 3em !important;
+  }
+
+  .cost-section .content-table img{
+    padding-top:2em;
+    width:100%;
+  }
+
+  .contact-section h2 {
+    display: flex;
+    flex-direction: column; /* 세로 정렬 */
+    align-items: center;
+    text-align: center;
+    gap: 0.5em;
+    font-size : 3em !important;
+
+  }
+
+  #inquiry-form {
+    margin-right:0em;
+    margin-left:0em;
+    width:100%;
+  }
+
+
+
+
+
+  .interior-content {
+    flex-direction: column;         /* 세로로 배치 */
+    align-items: center;            /* 가운데 정렬 */
+    margin-left: 0;
+    font-size: 0.9em;                 /* 글씨 크기 축소 */
+    padding: 0 1em;
+  }
+
+  .interior-text {
+    margin-left: 0;
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .interior-text h2 {
+    display: flex;
+    flex-direction: column; /* 세로 정렬 */
+    align-items: center;
+    text-align: center;
+    gap: 0.5em;
+    font-size : 3em !important;
+  }
+
+  .interior-text .desc {
+    font-size: 0.95em;
+    line-height: 1.6;
+  }
+
+  .interior-slider {
+    max-width: 100%;
+    width: 100%;
+    padding: 0 1em;
+  }
+
+  .interior-slider .swiper-slide img {
+    width: 100%;
+  }
+
+
+  /* 리뷰 */
+  .review-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    padding: 0 1em;
+  }
+
+  .review-card {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .review-img {
+    margin-right: 0;
+    margin-bottom: 0.5em;
+    width: 70px;
+    height: 70px;
+  }
+
+  .review-title {
+    font-size: 2em;
+  }
+
+  .review-content p {
+    font-size: 0.9em;
+  }
+
+
+  .site-footer {
+    padding:1em;
+  }
+
+  .footer-info {
+    font-size: 0.8em;
+  }
+
+  .footer-contact {
+    font-size : 1em;
+  }
+
 }

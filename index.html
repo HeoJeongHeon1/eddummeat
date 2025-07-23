@@ -6,6 +6,7 @@
     <title>으뜸 육회</title>
     <link rel="stylesheet" href="css/index.css" />
     <link href="https://fonts.googleapis.com/css2?family=Single+Day&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2301@1.1/Yangjin.woff2" as="style" crossorigin="anonymous">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
@@ -16,7 +17,7 @@
     <!-- nav -->
     <header class="navbar">
     <div class="navbar-container">
-        <div class="logo"><a href="index.html"><span id="brandname">으뜸육회</span></a></div>
+        <div class="logo"><a href="index.html"><img src="img/logo_all.png" alt="으뜸육회 로고" class="logo-image"></a></div>
         <nav class="menu">
         <a href="#first-banner">브랜드</a>
         <a href="#profit-section">가맹정보</a>
@@ -35,13 +36,30 @@
     </a>
 
 
+    <!--  팝업창2 -->
+    <div class="custom-popup" id="customPopup">
+    <div class="custom-popup-content">
+        <button class="custom-popup-close" id="customPopupClose">&times;</button>
+        <img src="img/logo.png" alt="" class="popup2-img">
+        <h2>20호점까지!</h2>
+        <p>✔ 가맹비 교육비 전액 면제!</p>
+        <p>✔ 인테리어 내부시설 자율시공 가능!</p>
+        <div class="custom-popup-footer">
+        <label><input type="checkbox" id="customDontShow"> 24시간 동안 보지 않기</label>
+        </div>
+    </div>
+    </div>
+
+
+
     <!-- 팝업 배경 -->
     <div id="popupOverlay" class="popup-overlay"></div>
 
     <!-- 팝업창 -->
     <div id="popup" class="popup">
     <img src="img/logo.png" alt="">
-    <h2>12호점달성!!</h2>
+    <h2>13호점달성!!</h2>
+    <p class="popup-desc">각 호점을 클릭하시면, 배민 링크로 연결됩니다.</p>
 
     <div class="branch-list">
         <div class="branch-item">
@@ -116,6 +134,12 @@
             <p>12호점 부산 서면점</p>
             </a>
         </div>
+        <div class="branch-item">
+            <a href="https://s.baemin.com/n8000n5bVJuya" target="_blank">
+            <img src="img/stores/구로점.jpg" alt="1호점">
+            <p>13호점 서울 구로점</p>
+            </a>
+        </div>
     </div>
 
 
@@ -141,7 +165,7 @@
     <section class="rolling-banner">
     <div class="rolling-track">
         <div class="rolling-text">
-        한우뭉티기 한우차돌박이사시미 한우육회 한우양지오드레기 한우육사시미 소곱창전골 노르웨이생연어 한우소고기무국 한우뭉티기 한우차돌박이사시미 한우육회 한우양지오드레기 한우육사시미 소곱창전골 노르웨이생연어 한우소고기무국 한우뭉티기 한우차돌박이사시미 한우육회 한우양지오드레기 한우육사시미 소곱창전골 노르웨이생연어 한우소고기무국
+        한우뭉티기 한우생차돌박이사시미 한우육회 한우양지오드레기 한우육사시미 소곱창전골 노르웨이생연어 한우소고기무국 한우뭉티기 한우생차돌박이사시미 한우육회 한우양지오드레기 한우육사시미 소곱창전골 노르웨이생연어 한우소고기무국 한우뭉티기 한우생차돌박이사시미 한우육회 한우양지오드레기 한우육사시미 소곱창전골 노르웨이생연어 한우소고기무국
         </div>
         <!-- 한우뭉티기 한우차돌박이사시미 한우육회 한우양지오드레기 한우육사시미 소곱창전골 노르웨이생연어 한우소고기무국 -->
     </div>
@@ -151,12 +175,15 @@
     <!-- 수익성 -->
     <section class="section profit-section" id="profit-section">
         <div class="profit-title">
-        <h2><span class="brand" id="brandname">으뜸육회</span> 수익성</h2>
+        <h2 class="slide-target slide-left">
+            <img src="img/logo_all.png" alt="으뜸육회" class="logo-img"/>
+            수익성
+        </h2>
         <p>남녀노소 사랑받는 메뉴 구성과 평일·주말 구분 없는 매출액으로 수익성을 증명합니다.</p>
         </div>
 
         <div class="profit-images">
-        <img src="img/sales.png" alt="수익 설명 1" class="profit-image" />
+        <img src="img/sales2.png" alt="수익 설명 1" class="profit-image" />
         <img src="img/table.png" alt="수익 설명 2" class="profit-image" />
         </div>
     </section>
@@ -165,12 +192,14 @@
     <!-- 주요 가맹점 -->
     <section class="section franchise-profit-section">
         <div class="profit-info">
-        <h2><span id="brandname">으뜸육회</span> 주요 가맹점</h2>
-        <p>평균 순이익 공개</p>
-        <p class="sub">당연히 본점(직영점)은 제외 가맹점 매출입니다!</p>
+        <h2>
+            <img src="img/logo_all.png" alt="으뜸육회" class="logo-img"/>
+            주요 가맹점<br>
+            평균 순이익
+        </h2>
 
         <div class="highlight-image-group">
-            <img src="img/profit.png" alt="22,300,000원" class="highlight-image" />
+            <img src="img/profit.png" alt="22,300,000원" class="highlight-image slide-target slide-top" />
         </div>
         </div>
 
@@ -199,7 +228,10 @@
 
     <!-- 메뉴 -->
     <section class="section menu-section" id="menu-section">
-    <h2 class="menu-title"><span id="brandname">으뜸육회 </span> <span class="highlight">메뉴</span></h2>
+    <h2 class="menu-title slide-target slide-left">
+        <img src="img/logo-brown.png" alt="으뜸육회" class="logo-img"/>
+        <span class="highlight">메뉴</span>
+    </h2>
 
     <div class="menu-grid">
         <div class="menu-item">
@@ -262,11 +294,14 @@
 
     <!-- 리뷰 -->
     <section class="review-section">
-    <h2 class="review-title"><span id="brandname">으뜸육회 </span> <span class="white-color">리뷰</span></h2>
+    <h2 class="review-title fade-target">
+        <img src="img/logo_all.png" alt="으뜸육회" class="logo-img"/>
+        <span>리뷰</span>
+    </h2>
 
-    <div class="review-container">
+    <div class="review-container ">
         <!-- 리뷰 카드 1 -->
-        <div class="review-card">
+        <div class="review-card slide-target slide-left">
         <img src="img/review/1.jpg" alt="리뷰 이미지" class="review-img" />
         <div class="review-content">
             <div class="stars">★★★★★</div>
@@ -280,7 +315,7 @@
         </div>
 
         <!-- 리뷰 카드 2 -->
-        <div class="review-card">
+        <div class="review-card slide-target slide-left">
         <img src="img/review/2.jpg" alt="리뷰 이미지" class="review-img" />
         <div class="review-content">
             <div class="stars">★★★★★</div>
@@ -292,7 +327,7 @@
         </div>
 
         <!-- 리뷰 카드 3 -->
-        <div class="review-card">
+        <div class="review-card slide-target slide-left">
         <img src="img/review/3.jpg" alt="리뷰 이미지" class="review-img" />
         <div class="review-content">
             <div class="stars">★★★★★</div>
@@ -310,7 +345,7 @@
         </div>
 
         <!-- 리뷰 카드 3 -->
-        <div class="review-card">
+        <div class="review-card slide-target slide-left">
         <img src="img/review/4.jpg" alt="리뷰 이미지" class="review-img" />
         <div class="review-content">
             <div class="stars">★★★★★</div>
@@ -325,7 +360,7 @@
 
 
         <!-- 리뷰 카드 3 -->
-        <div class="review-card">
+        <div class="review-card slide-target slide-left">
         <img src="img/review/5.jpg" alt="리뷰 이미지" class="review-img" />
         <div class="review-content">
             <div class="stars">★★★★★</div>
@@ -347,7 +382,7 @@
         </div>        
 
         <!-- 리뷰 카드 3 -->
-        <div class="review-card">
+        <div class="review-card slide-target slide-left">
         <img src="img/review/6.jpg" alt="리뷰 이미지" class="review-img" />
         <div class="review-content">
             <div class="stars">★★★★★</div>
@@ -363,7 +398,7 @@
         </div>
 
         <!-- 리뷰 카드 3 -->
-        <div class="review-card">
+        <div class="review-card slide-target slide-left">
         <img src="img/review/7.jpg" alt="리뷰 이미지" class="review-img" />
         <div class="review-content">
             <div class="stars">★★★★★</div>
@@ -381,7 +416,7 @@
         </div>
 
         <!-- 리뷰 카드 3 -->
-        <div class="review-card">
+        <div class="review-card slide-target slide-left">
         <img src="img/review/8.jpg" alt="리뷰 이미지" class="review-img" />
         <div class="review-content">
             <div class="stars">★★★★★</div>
@@ -402,7 +437,7 @@
         </div>
 
         <!-- 리뷰 카드 3 -->
-        <div class="review-card">
+        <div class="review-card slide-target slide-left">
         <img src="img/review/9.jpg" alt="리뷰 이미지" class="review-img" />
         <div class="review-content">
             <div class="stars">★★★★★</div>
@@ -418,7 +453,7 @@
         </div>
 
         <!-- 리뷰 카드 3 -->
-        <div class="review-card">
+        <div class="review-card slide-target slide-left">
         <img src="img/review/10.jpg" alt="리뷰 이미지" class="review-img" />
         <div class="review-content">
             <div class="stars">★★★★★</div>
@@ -442,7 +477,7 @@
         </div>
 
         <!-- 리뷰 카드 3 -->
-        <div class="review-card">
+        <div class="review-card slide-target slide-left">
         <img src="img/review/11.jpg" alt="리뷰 이미지" class="review-img" />
         <div class="review-content">
             <div class="stars">★★★★★</div>
@@ -458,7 +493,7 @@
         </div>
 
         <!-- 리뷰 카드 3 -->
-        <div class="review-card">
+        <div class="review-card slide-target slide-left">
         <img src="img/review/12.jpg" alt="리뷰 이미지" class="review-img" />
         <div class="review-content">
             <div class="stars">★★★★★</div>
@@ -479,7 +514,7 @@
         </div>
 
         <!-- 리뷰 카드 3 -->
-        <div class="review-card">
+        <div class="review-card slide-target slide-left">
         <img src="img/review/13.jpg" alt="리뷰 이미지" class="review-img" />
         <div class="review-content">
             <div class="stars">★★★★★</div>
@@ -497,7 +532,7 @@
         </div>
 
         <!-- 리뷰 카드 3 -->
-        <div class="review-card">
+        <div class="review-card slide-target slide-left">
         <img src="img/review/14.jpg" alt="리뷰 이미지" class="review-img" />
         <div class="review-content">
             <div class="stars">★★★★★</div>
@@ -526,7 +561,10 @@
     <section class="section interior-section" id="interior-section">
     <div class="interior-content">
         <div class="interior-text">
-        <h2>정직한 신선함, <span class="bold" id="brandname">으뜸육회</span></h2>
+        <h2 class="slide-target slide-left">
+            정직한 신선함, <br>
+            <img src="img/logo_all.png" alt="으뜸육회" class="logo-img"/>
+        </h2>
         <p class="desc">
             으뜸육회는 "신선함이 곧 맛의 시작"이라는 철학을 바탕으로 <br>
             매일 최상의 육류만을 엄선하여 손님께 제공합니다. <br>
@@ -561,14 +599,24 @@
 
 
     <!-- 가맹가입절차 -->
-    <section id="enter", class="section enter">
-        <img src="img/enter.png" alt="가입절차 이미지">
+    <section id="enter", class="section enter-section">
+        <h2 class="enter-title fade-target">
+            <img src="img/logo_all.png" alt="으뜸육회" class="logo-img"/>
+            신규가맹절차
+        </h2>
+        <p>
+            저희는 다년간의 경험을 바탕으로 <br>
+            상권분석부터 사후관리까지 본사에서 모두 책임지고 있습니다.
+        </p>
+        <div class="enter-table"><img src="img/enter2.png" alt="가입절차 이미지"></div>
     </section>
 
     <!-- 창업비용안내 -->
     <section id="cost-section", class="section cost-section">
-        <h2><span class="red-text" id="brandname">으뜸육회</span> 가맹<br>
-            창업비용 안내
+        
+        <h2 class="fade-target">
+            <img src="img/logo_all.png" alt="으뜸육회" class="logo-img"/>
+            가맹 창업비용 안내
         </h2>
         <div class="content-table"><img src="img/table2.png" alt="가입절차 이미지"></div>
         
@@ -577,8 +625,9 @@
 
     <!-- 창업문의 -->
     <section id="contact-section" class="section contact-section">
+    <h2 class="fade-target"><img src="img/logo_all.png" alt="으뜸육회" class="logo-img"/> 창업문의</h2>
     <form id="inquiry-form">
-        <h1><span class="highlight" id="brandname">으뜸육회</span> 창업문의</h1>
+        
 
         <label>성함*</label>
         <input type="text" name="name" required />
@@ -691,6 +740,9 @@
     <script src="js/menu.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="js/interrior.js"></script>
+    <script src="js/popup2.js"></script>
+    <script src="js/sliding.js"></script>
+
 
 </body>
 
