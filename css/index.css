@@ -612,6 +612,8 @@ html {
   padding: 0;
 }
 
+
+
 .receipt-list li {
   opacity: 0;
   transform: translateY(3em);
@@ -620,7 +622,6 @@ html {
 
 .receipt-list li img {
     width:20em;
-
 }
 
 .receipt-list li.show {
@@ -628,6 +629,15 @@ html {
   transform: translateY(0);
 }
 
+
+.receipt2 {
+  gap:6em;
+  margin-top:0;
+}
+
+.receipt2 li img {
+  width:30em;
+}
 
 
 
@@ -789,19 +799,30 @@ html {
   line-height: 1.6;
   color: #ddd;
 }
-
 .interior-slider {
   flex: 1;
   min-width: 20em;
   max-width: 40em;
+
+  /* 📌 높이 고정 (원하는 값으로 설정) */
+  height: 38em; /* 또는 350px 등 */
+  overflow: hidden; /* 이미지 넘침 방지 */
+  position: relative;
+}
+
+.interior-slider .swiper-slide {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .interior-slider .swiper-slide img {
-  width: 90%;
-  height: auto;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  /* or 'contain' if 여백 생겨도 비율 유지 원하면 */
   border-radius: 0.5em;
 }
-
 
 
 /* 가입절차 */
@@ -1608,6 +1629,15 @@ img {
   margin: 0;
   line-height: 1.2;
   vertical-align: middle;
+}
+
+.receipt2 {
+  gap:0.5em;
+  margin-top:0;
+}
+
+.receipt2 li img {
+  width:35em;
 }
 
 }
