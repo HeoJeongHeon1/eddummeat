@@ -366,6 +366,7 @@ html {
     right: 1em;
     width: 8em;
   }
+
   .slide-target,
   .slide-left,
   .slide-right,
@@ -375,6 +376,9 @@ html {
     opacity: 1 !important;
     transform: none !important;
   }
+
+
+
 
 }
 
@@ -428,6 +432,10 @@ html {
     font-size : 3em !important;
   }
 
+  #profit-section {
+    padding-top:0;
+  }
+
 
   .profit-title p {
     font-size : 1em !important;
@@ -454,6 +462,7 @@ html {
 
   .franchise-profit-section .receipt-list {
     margin-top:1em;
+    gap: 0.5em;
   }
 
   .franchise-profit-section .receipt-list li {
@@ -598,7 +607,7 @@ html {
   margin-top: 4em;
   display: flex;
   justify-content: center;
-  gap: 3em;
+  gap: 2em;
   list-style: none;
   padding: 0;
 }
@@ -1332,7 +1341,7 @@ img {
   }
 
   .review-card {
-    width:90%;
+    width:100%;
   }
 
   .review-content {
@@ -1356,6 +1365,18 @@ img {
   .enter-table {
     width:100%;
     padding-top:1em;
+  }
+
+  .enter-section .enter-table img {
+    width:95%;
+  }
+
+  .cost-section .fade-target{
+    padding-top:0;
+  }
+
+  .cost-section {
+    padding-bottom:4em;
   }
 
   .cost-section h2 {
@@ -1389,7 +1410,7 @@ img {
   }
 
 
-
+  
 
 
   .interior-content {
@@ -1460,6 +1481,10 @@ img {
     font-size: 0.9em;
   }
 
+  .mobile-delete {
+    display: none;
+  }
+
 
   .site-footer {
     padding:1em;
@@ -1507,6 +1532,44 @@ img {
   font-size: 0.9em;
 }
 
+.footer-content .footer-contact a {
+  font-size:2em;
+}
+
+.franchise-profit-section .receipt-list .show {
+  width:10em;
+}
+
+.interior-text .desc{
+  text-align: left;
+  font-size:1em;
+  padding-top:1em;
+}
+
+}
 
 
+
+/* 반응형 애니메이션 */
+@media (max-width: 600px) {
+  .mobile-left {
+    opacity: 0;
+    transform: translateX(-80px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+  }
+
+  .mobile-left.active-mobile-left {
+    animation: slideInLeftMobile 0.8s ease-out forwards;
+  }
+
+  @keyframes slideInLeftMobile {
+    0% {
+      opacity: 0;
+      transform: translateX(-80px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
 }
