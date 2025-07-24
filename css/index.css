@@ -801,11 +801,12 @@ html {
 }
 .interior-slider {
   flex: 1;
-  min-width: 20em;
+  min-width: 15em;
   max-width: 40em;
 
   /* 📌 높이 고정 (원하는 값으로 설정) */
-  height: 38em; /* 또는 350px 등 */
+  height: 40em; /* 또는 350px 등 */
+  width: 15em;
   overflow: hidden; /* 이미지 넘침 방지 */
   position: relative;
 }
@@ -818,7 +819,7 @@ html {
 }
 
 .interior-slider .swiper-slide img {
-  width: 100%;
+  width: 67%;
   height: 100%;
   object-fit: cover;  /* or 'contain' if 여백 생겨도 비율 유지 원하면 */
   border-radius: 0.5em;
