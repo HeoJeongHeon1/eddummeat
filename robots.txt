@@ -1,0 +1,7 @@
+User-agent: Yeti
+Allow:/
+
+User-agent: bingbot
+Crawl-delay: 10
+
+Sitemap: https://euddeumyukhoe.com/sitemap.xml
