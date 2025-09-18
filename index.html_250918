@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>으뜸 육회</title>
+    <link rel="stylesheet" href="css/index.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Single+Day&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2301@1.1/Yangjin.woff2" as="style" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+</head>
+<body>
+
+
+    <!-- nav -->
+    <header class="navbar">
+    <div class="navbar-container">
+        <div class="logo"><a href="index.html"><img src="img/logo_all.png" alt="으뜸육회 로고" class="logo-image"></a></div>
+        <nav class="menu">
+        <a href="#first-banner">브랜드</a>
+        <a href="#profit-section">가맹정보</a>
+        <a href="#menu-section">메뉴</a>
+        <a href="#interior-section">인테리어</a>
+        <a href="#enter">가맹가입절차</a>
+        <a href="#contact-section">상담문의</a>
+        </nav>
+    </div>
+    </header>
+
+
+    <!-- 가맹문의 버튼 -->
+    <a href="#contact-section" class="fixed-consult-btn">
+        <img src="img/contact-btn2.png" alt="가맹문의" />
+    </a>
+
+
+    <!--  팝업창2 -->
+    <div class="custom-popup" id="customPopup">
+    <div class="custom-popup-content">
+        <button class="custom-popup-close" id="customPopupClose">&times;</button>
+        <img src="img/logo.png" alt="" class="popup2-img">
+        <h2>20호점까지!</h2>
+        <p>✔ 가맹비 교육비 전액 면제!</p>
+        <p>✔ 인테리어 내부시설 자율시공 가능!</p>
+        <div class="custom-popup-footer">
+        <label><input type="checkbox" id="customDontShow"> 24시간 동안 보지 않기</label>
+        </div>
+    </div>
+    </div>
+
+
+
+    <!-- 팝업 배경 -->
+    <div id="popupOverlay" class="popup-overlay"></div>
+
+    <!-- 팝업창 -->
+    <div id="popup" class="popup">
+    <img src="img/logo.png" alt="">
+    <h2>13호점달성!!</h2>
+    <p class="popup-desc">각 호점을 클릭하시면, 배민 링크로 연결됩니다.</p>
+
+    <div class="branch-list">
+        <div class="branch-item">
+            <a href="https://s.baemin.com/lI000f4VCrCrI" target="_blank">
+            <img src="img/stores/본점.jpg" alt="1호점">
+            <p>1호점 진천본점</p>
+            </a>
+        </div>
+        <div class="branch-item">
+            <a href="https://s.baemin.com/wP000fe4ziQMy" target="_blank">
+            <img src="img/stores/테크노폴리스점.jpg" alt="1호점">
+            <p>2호점 대구 현풍테크노폴리스점</p>
+            </a>
+        </div>
+        <div class="branch-item">
+            <a href="https://s.baemin.com/nO000fYOZs4nN" target="_blank">
+            <img src="img/stores/성서점.jpg" alt="1호점">
+            <p>3호점 대구 성서점</p>
+            </a>
+        </div>
+        <div class="branch-item">
+            <a href="https://s.baemin.com/un000fu1wHbCZ" target="_blank">
+            <img src="img/stores/감삼점.jpg" alt="1호점">
+            <p>4호점 대구 감삼점</p>
+            </a>
+        </div>
+        <div class="branch-item">
+            <a href="https://s.baemin.com/tv000f7uFg5Wl" target="_blank">
+            <img src="img/stores/북구점.jpg" alt="1호점">
+            <p>5호점 대구 북구점</p>
+            </a>
+        </div>
+        <div class="branch-item">
+            <a href="https://s.baemin.com/ga000geG5CWXR" target="_blank">
+            <img src="img/stores/수성점.jpg" alt="1호점">
+            <p>6호점 대구 수성점</p>
+            </a>
+        </div>
+        <div class="branch-item">
+            <a href="https://s.baemin.com/K4000fsywiVba" target="_blank">
+            <img src="img/stores/율하점.jpg" alt="1호점">
+            <p>7호점 대구 율하점</p>
+            </a>
+        </div>
+        <div class="branch-item">
+            <a href="https://s.baemin.com/08000fLCcuL7B" target="_blank">
+            <img src="img/stores/사상점.jpg" alt="1호점">
+            <p>8호점 부산 사상점</p>
+            </a>
+        </div>
+        <div class="branch-item">
+            <a href="https://s.baemin.com/jU000hDKLbbiV" target="_blank">
+            <img src="img/stores/시지점.jpg" alt="1호점">
+            <p>9호점 대구 시지점</p>
+            </a>
+        </div>
+        <div class="branch-item">
+            <a href="https://s.baemin.com/r9000hvK0qgwB" target="_blank">
+            <img src="img/stores/칠곡점.jpg" alt="1호점">
+            <p>10호점 대구 칠곡점</p>
+            </a>
+        </div>
+        <div class="branch-item">
+            <a href="https://s.baemin.com/v6000hLAMnHBs" target="_blank">
+            <img src="img/stores/하단점.jpg" alt="1호점">
+            <p>11호점 부산 하단점</p>
+            </a>
+        </div>
+        <div class="branch-item">
+            <a href="https://s.baemin.com/wJ000mpciNiml" target="_blank">
+            <img src="img/stores/서면점.jpg" alt="1호점">
+            <p>12호점 부산 서면점</p>
+            </a>
+        </div>
+        <div class="branch-item">
+            <a href="https://s.baemin.com/n8000n5bVJuya" target="_blank">
+            <img src="img/stores/구로점.jpg" alt="1호점">
+            <p>13호점 서울 구로점</p>
+            </a>
+        </div>
+    </div>
+
+
+    <div class="popup-footer">
+        <label class="dont-show">
+        <input type="checkbox" id="dontShow24h">
+        24시간 동안 보지 않기
+        </label>
+        <button id="popupCloseBtn" class="popup-close-btn">닫기</button>
+    </div>
+    </div>
+
+
+
+    <!-- 배너 -->
+    <section class="simple-slider" id="first-banner">
+    <img src="img/banner/banner1.jpg" class="slider-image active" />
+    <img src="img/banner/banner2.jpg" class="slider-image" />
+    <img src="img/banner/banner3.jpg" class="slider-image" />
+    </section>
+
+    <!-- 롤링 배너 -->
+    <section class="rolling-banner">
+    <div class="rolling-track">
+        <div class="rolling-text">
+        한우뭉티기 한우생차돌박이사시미 한우육회 한우양지오드레기 한우육사시미 소곱창전골 노르웨이생연어 한우소고기무국 한우뭉티기 한우생차돌박이사시미 한우육회 한우양지오드레기 한우육사시미 소곱창전골 노르웨이생연어 한우소고기무국 한우뭉티기 한우생차돌박이사시미 한우육회 한우양지오드레기 한우육사시미 소곱창전골 노르웨이생연어 한우소고기무국
+        </div>
+        <!-- 한우뭉티기 한우차돌박이사시미 한우육회 한우양지오드레기 한우육사시미 소곱창전골 노르웨이생연어 한우소고기무국 -->
+    </div>
+    </section>
+
+
+
+    <!-- 주요 가맹점 -->
+    <section class="section franchise-profit-section">
+        <div class="profit-info mobile-left">
+        <h2>
+            <img src="img/logo_all.png" alt="으뜸육회" class="logo-img"/>
+            주요 가맹점<br>
+            평균 순이익
+        </h2>
+
+        <div class="highlight-image-group">
+            <img src="img/profit.png" alt="22,300,000원" class="highlight-image slide-target slide-top" />
+        </div>
+        </div>
+
+        <ul class="receipt-list">
+        <li><img src="img/bills/bills1.png" alt="대구 A점" /></li>
+        <li><img src="img/bills/bills2.png" alt="대구 B점" /></li>
+        <li><img src="img/bills/bills3.png" alt="대구 C점" /></li>
+        </ul>
+    </section>
+
+
+    <!-- 수익성 -->
+    <section class="section profit-section" id="profit-section">
+        <div class="profit-title mobile-left">
+        <h2 class="slide-target slide-left">
+            <img src="img/logo_all.png" alt="으뜸육회" class="logo-img"/>
+            수익성
+        </h2>
+        <p>남녀노소 사랑받는 메뉴 구성과 평일·주말 구분 없는 매출액으로 수익성을 증명합니다.</p>
+        </div>
+
+        <div class="profit-images">
+        <img src="img/sales2.png" alt="수익 설명 1" class="profit-image" />
+        <img src="img/table.png" alt="수익 설명 2" class="profit-image" />
+        </div>
+    </section>
+
+
+
+    <!-- 매출전표 -->
+    <section class="section profit-section" id="profit-section">
+        <div class="profit-title mobile-left">
+        <h2 class="slide-target slide-left">
+            <img src="img/logo_all.png" alt="으뜸육회" class="logo-img"/>
+            실재매출증빙
+        </h2>
+        <ul class="receipt-list receipt2">
+        <li><img src="img/bills2/사상 북구 진천 매출.webp" alt="매출증빙1" /></li>
+        <li><img src="img/bills2/칠곡 시지 하단 율하 매출.webp" alt="매출증빙2" /></li>
+        </ul>
+    </section>
+
+
+
+
+    <!-- 창업비용안내 -->
+    <section id="cost-section", class="section cost-section">
+        
+        <div class="mobile-left">
+        <h2 class="fade-target">
+            <img src="img/logo_all.png" alt="으뜸육회" class="logo-img"/>
+            가맹 창업비용 안내
+        </h2>
+        <div class="content-table"><img src="img/table2.png" alt="가입절차 이미지"></div>
+        </div>
+    </section>    
+
+
+    <!-- <section class="section franchise-profit-section">
+        <div class="profit-info">
+        <h2 class="sales-change"><span id="brandname">으뜸육회 </span>와 함께라면 "수익"이 달라집니다!</h2>
+
+        <div class="highlight-image-group">
+            <img src="img/sales_change.png" alt="매출증대" class="highlight-image" />
+            <img src="img/sales_change2.png" alt="매출증대표" class="highlight-image" />
+        </div>
+        </div>
+
+        <span>※ 업종변경 시 최소비용으로 창업 도와드립니다.</span>
+
+    </section> -->
+
+
+    <!-- 메뉴 -->
+    <section class="section menu-section" id="menu-section">
+    <div class="mobile-left">
+    <h2 class="menu-title slide-target slide-left">
+        <img src="img/logo-brown.png" alt="으뜸육회" class="logo-img"/>
+        <span class="highlight">메뉴</span>
+    </h2>
+    </div>
+
+    <div class="menu-grid">
+        <div class="menu-item">
+        <img src="img/menu/HY_05143.jpg" alt="한우으뜸육회">
+        <p>한우으뜸육회</p>
+        </div>
+        <div class="menu-item">
+        <img src="img/menu/HY_05139.jpg" alt="한우뭉티기">
+        <p>한우뭉티기</p>
+        </div>
+        <div class="menu-item">
+        <img src="img/menu/HY_05136.jpg" alt="한우뭉티기생차돌">
+        <p>한우뭉티기생차돌</p>
+        </div>
+        <div class="menu-item">
+        <img src="img/menu/HY_05138.jpg" alt="한우육회뭉티기">
+        <p>한우육회뭉티기</p>
+        </div>
+        <div class="menu-item">
+        <img src="img/menu/HY_05142.jpg" alt="한우육회생차돌">
+        <p>한우육회생차돌</p>
+        </div>
+        <div class="menu-item">
+        <img src="img/menu/HY_05141.jpg" alt="한우육사시미">
+        <p>한우육사시미</p>
+        </div>
+        <div class="menu-item">
+        <img src="img/menu/HY_05153.jpg" alt="빨간오뎅탕">
+        <p>한우차돌박이라면</p>
+        </div>
+        <div class="menu-item">
+        <img src="img/menu/HY_05145.jpg" alt="빨간오뎅탕">
+        <p>한우육회비빔밥</p>
+        </div>
+        <div class="menu-item">
+        <img src="img/menu/HY_05144.jpg" alt="빨간오뎅탕">
+        <p>한우양지오드레기</p>
+        </div>
+        <div class="menu-item">
+        <img src="img/menu/HY_05150.jpg" alt="빨간오뎅탕">
+        <p>소곱창전골</p>
+        </div>
+    </div>
+
+    <div class="menu-button-wrap">
+        <button class="view-all-menu-btn">전체메뉴보기 +</button>
+    </div>
+    </section>
+
+
+    <!-- 팝업 레이어 -->
+    <div class="menu-popup" id="menuPopup">
+    <div class="popup-content">
+        <button class="popup-close">&times;</button>
+        <img src="img/menu_all.png" alt="전체메뉴 이미지">
+    </div>
+    </div>
+
+
+
+    <!-- 리뷰 -->
+    <section class="review-section">
+    <div class="mobile-left">
+    <h2 class="review-title fade-target">
+        <img src="img/logo_all.png" alt="으뜸육회" class="logo-img"/>
+        <span>리뷰</span>
+    </h2>
+    </div>
+
+    <div class="review-container ">
+        <!-- 리뷰 카드 1 -->
+        <div class="review-card fade-target mobile-left">
+        <img src="img/review/1.jpg" alt="리뷰 이미지" class="review-img" />
+        <div class="review-content">
+            <div class="stars">★★★★★</div>
+            <p>
+                원래 뭉티기 오면 양념 없이 생고기만 먼저 먹어보는데
+                조금 숙성돼서 힘줄의 질김은 적고 쫄깃하고 맛있었어요!
+                육회 양념도 맛있고 뭉티기가 양이 적어보여도
+                약간 두툼해서 생각보다 양이 꽤 되네요
+                서비스로 과자도 보내주셔서 너무 감사해요 😊
+                덕분에 이사하고, 새로운 지역에서 적응하느라 힘들었는데,
+                오늘밤 행복한 하루를 주셔서 너무 감사해요 ❤️ 
+            </p>
+        </div>
+        </div>
+
+        <!-- 리뷰 카드 2 -->
+        <div class="review-card slide-target slide-left mobile-delete">
+        <img src="img/review/2.jpg" alt="리뷰 이미지" class="review-img" />
+        <div class="review-content">
+            <div class="stars">★★★★★</div>
+            <p>
+                말이 필요없어요 싱싱함, 맛, 배달속도 진짜... 갬덩갬덩 ❤️
+                오늘도 신나는 육퇴후 맛있는 으뜸 육회랑 차돌로 마무리 합니댜 세상햄뻑 👍
+            </p>
+        </div>
+        </div>
+
+        <!-- 리뷰 카드 3 -->
+        <div class="review-card fade-target mobile-left">
+        <img src="img/review/3.jpg" alt="리뷰 이미지" class="review-img" />
+        <div class="review-content">
+            <div class="stars">★★★★★</div>
+            <p>
+                비상금 오픈으로 젤 먹고 싶었던 으뜸육회 주문~⭐
+                여기 사먹을꺼라고 열심히 돈 벌었습니다 😄
+                서비스도 챙겨주시구 너무 감사해요
+                맛있는 야식이 될것 같습니다! 너무 감사해용
+                제가 지난달 한 번 먹어본 사람은 있어도 한번도 안 먹어본 사람은 없는 찐 맛집이라고 했잖아요?
+                진짜 여기 나중에 대박날꺼에요!
+                이렇게 맛있는데 누가 안 먹겠냐구여!!
+                여러분 여기 안 먹으면 후회합니다!!
+            </p>
+        </div>
+        </div>
+
+        <!-- 리뷰 카드 3 -->
+        <div class="review-card slide-target slide-left mobile-delete">
+        <img src="img/review/4.jpg" alt="리뷰 이미지" class="review-img" />
+        <div class="review-content">
+            <div class="stars">★★★★★</div>
+            <p>
+                음식의 퀄리티도 가격에 비해 높았구 엄청 맛있게 잘 보존되어서 배달되어서 좋았습니다!
+                뭐니뭐니 해도 맛이 제일 중요하다 생각하는데 서비스 감태와 함께 먹으니 더욱 맛이 좋았습니다.
+                다음엔 더 시켜서 함께 먹을게요 !!
+                건강이 오래오래 영업해주세요😄
+            </p>
+        </div>
+        </div>        
+
+
+        <!-- 리뷰 카드 3 -->
+        <div class="review-card fade-target mobile-left">
+        <img src="img/review/5.jpg" alt="리뷰 이미지" class="review-img" />
+        <div class="review-content">
+            <div class="stars">★★★★★</div>
+            <p>
+                한 점 넣자마자.... 이건 그냥 혀 위에서 녹음." <br>
+                육회 먹자마자 첫 느낌? 신선함으로 한 대 맞은 기분. <br>
+                비린내? 전혀 없음. 부드럽게 씹히는 생고기 텍스처가 미쳤음.
+                <br>
+                양념은 과하지 않게 간이 딱 잡혀 있어서, 고기 맛을 해치지 않고 오히려 살려줌.
+                달달한 배채랑 가팅 먹으면 그냥 입에서 화합선언함.<br>
+
+                특히 계란 노른자 톡 터뜨려서 비벼 먹으면...<br>
+                👉 "이건 밥 도둑 아니라 밥 강도임."<br>
+
+                한줄평<br>
+                "내 인생 육회 top3 안에 박제. 같이 먹은 소주가 감동으로 울더라."                
+            </p>
+        </div>
+        </div>        
+
+        <!-- 리뷰 카드 3 -->
+        <div class="review-card slide-target slide-left mobile-delete">
+        <img src="img/review/6.jpg" alt="리뷰 이미지" class="review-img" />
+        <div class="review-content">
+            <div class="stars">★★★★★</div>
+            <p>
+                친구랑 대구 놀러와서 육회 시켜먹으려고 판매율 제일 높은가게로 시킨집이에요!!!
+                육회집 잘못가면 비려서 평소에 즐기지는 않는 편이었는데
+                여기가게 육회는 진짜 그냥 너무 맛있었어요ㅠㅠㅠ
+                제가 딱 원하는 맛이었습니다!!
+                다음에 대구오면 앞으론 여기서만 육회 주문가려합니다!
+                서비스로 과자도 주시구 사이드로 나오는 무국도 진짜 맛있었네요 번창하세요!!!!!! 😍                
+            </p>
+        </div>
+        </div>
+
+        <!-- 리뷰 카드 3 -->
+        <div class="review-card fade-target mobile-delete">
+        <img src="img/review/7.jpg" alt="리뷰 이미지" class="review-img" />
+        <div class="review-content">
+            <div class="stars">★★★★★</div>
+            <p>
+                죄송해요.. 퇴근 전에 미리 시켜두고 집 도착하자마자 먹는다고 사진을 못 찍었어요
+                육회는 고기가 큼직해서 씹는 맛이 좋고 아주 맛있고요!
+                제 사랑 등골 파는 곳이 적어서 속상했는데 여기서 살 수 있어서 너무 행복하고요!
+                소스 군더더기 없고 양도 마음에 들고 완벽합니다!
+                신선한 등골은 말랑보다는 약간 사각거리는데 여기 등골 참 신선합니다
+                👍 등골.. 미쳐.. 최고야.. 여길 왜 이제 알았을까요..
+                다음엔 땡초 육회 시켜보겠습니다 사장님 번창하세요
+                😉                
+            </p>
+        </div>
+        </div>
+
+        <!-- 리뷰 카드 3 -->
+        <div class="review-card slide-target slide-left mobile-delete">
+        <img src="img/review/8.jpg" alt="리뷰 이미지" class="review-img" />
+        <div class="review-content">
+            <div class="stars">★★★★★</div>
+            <p>
+                신랑이 이제 생고기는 여기서 시켜먹자고 하네요~~
+                양념장도 맛있고 싱싱하다네요
+                전 생고기는 잘 못 먹지만 양념장이 맛나서 이번엔 좀 먹었어요~~^^
+                차돌사시미? 요건 참 고소하니 맛있더라고요 잘 먹었습니다^^
+                원래 뭉티기를 좋아해서 한 가게에서 2년 동안 한달에 3번 시킬 정도로 자주 먹었지만
+                최근 타지에서 대구로 이사와서 야밤에 너무 생각나서 가게를 보다가
+                리뷰 사진이 제일 괜찮아 보여서 처음 시켜봤어요!               
+            </p>
+        </div>
+        </div>
+
+        <!-- 리뷰 카드 3 -->
+        <div class="review-card fade-target mobile-left">
+        <img src="img/review/9.jpg" alt="리뷰 이미지" class="review-img" />
+        <div class="review-content">
+            <div class="stars">★★★★★</div>
+            <p>
+                사장님 너무 맛있어요 ㅠㅠㅠ
+                책임 지셔야 될 거 같은데요 ,, 😂😂😂
+                이렇게 맛있으면 유죄 아닙니까 !!!!!?????
+
+                금요일 저녁마다 선정되는 메뉴입니다 ❤️❤️
+                오늘따라 육사시미가 평소보다 엄청 부드럽네요 💖
+                그냥 미쳤다는 말 밖에… 💙
+
+                사장님도 매번 친절하셔서 덕분에 기분도 좋게 먹었다~~~~~
+                항상 최고의 육사시미와 육회를 만들어주셔서 감사합니다 💗
+                주문할 때마다 요청사항 잘 들어주셔서 사실 감동입니다 🥺🙇
+                진심으로 번창하길 기원합니다 🥰🥰
+                질릴 때까지 먹도록 할게요 🖤🖤
+                오늘도 으뜸육회 화이팅 !!!!! 💪🏼💪🏼   
+            </p>
+        </div>
+        </div>
+
+        <!-- 리뷰 카드 3 -->
+        <div class="review-card slide-target slide-left mobile-delete">
+        <img src="img/review/10.jpg" alt="리뷰 이미지" class="review-img" />
+        <div class="review-content">
+            <div class="stars">★★★★★</div>
+            <p>
+                진짜 사장님한테 뭐라고 감사의 말을 드려야 할지
+                천엽 조오오오오금만 달라고 했는데 챙겨주시고
+                양도 많고 고기가 얼마나 싱싱한지
+                진짜 친구도 맛있다고 난리도 아니에요
+                대구 오면 꼭 먹어야겠다고 다들 기억했답니다
+                적게 일하고 많이 버세요 ❤️              
+            </p>
+        </div>
+        </div>
+
+        <!-- 리뷰 카드 3 -->
+        <div class="review-card fade-target mobile-left">
+        <img src="img/review/11.jpg" alt="리뷰 이미지" class="review-img" />
+        <div class="review-content">
+            <div class="stars">★★★★★</div>
+            <p>
+                자꾸 생각나서 자주 찾게 되는 곳입니다 😂
+                먹어도 먹어도 안질리네요 ㅠㅠㅠ 증말
+                아침 점심 저녁 365일 으뜸육회만
+                먹어도 진짜 안질릴 것 같네요 🥰
+                저희 언니 같이 육회 안 좋아하는 사람들도
+                맛있어지게 하는 마법의 맛이랍니다 🥺🥺
+                오늘도 정~~말 맛있게 잘 먹었어요 !!
+                곧 재주문 할게요 .
+                저희 저녁 안주를 항상 맛있게 책임져주셔서
+                매우 감사합니다람쥐 💗🙊
+                77ㅑ 또 먹고싶다 🥺🥺🥺🥺🥺🥺🥺                 
+            </p>
+        </div>
+        </div>
+
+        <!-- 리뷰 카드 3 -->
+        <div class="review-card slide-target slide-left mobile-delete">
+        <img src="img/review/12.jpg" alt="리뷰 이미지" class="review-img" />
+        <div class="review-content">
+            <div class="stars">★★★★★</div>
+            <p>
+                음식도 신선하고 맛있고
+                뭉티기 장도 너무 맛있어서 잘 먹었습니다.
+                하나하나 정성스럽게 포장해주셔서 기분 좋게 먹었어요.
+                서비스로 주신 복권이 2억 당첨되는 줄 알고..
+                잠시나마의 행복도 주셨네요 ㅎㅎ
+                자주 이용할게요 😆                 
+            </p>
+        </div>
+        </div>
+
+        <!-- 리뷰 카드 3 -->
+        <div class="review-card fade-target mobile-left">
+        <img src="img/review/13.jpg" alt="리뷰 이미지" class="review-img" />
+        <div class="review-content">
+            <div class="stars">★★★★★</div>
+            <p>
+                으뜸 육회 최고…
+                ❤️ 좋은 일들 있을 때마다 으뜸 육회가 가장 먼저 생각나요
+                ☺️ 진짜 너무너무 맛있게 잘 먹었어요
+                🥺 생차돌 진짜 고소하고 부드럽고 쫄깃하고
+                ❤️… 간천엽은 진짜 달달하고 어마어마하게 신선하고,,
+                🥺 생차돌의 매력에 또 반한 오늘입니당
+                🙌 요청사항도 잘 들어주셔서 감사해요 🥺
+                평생 단골할게요 !!!!
+                더 대박나시고 늘 건강하고 행복하세요!
+                🍀 늘 감사합니당 ❤️ 
+            </p>
+        </div>
+        </div>
+
+        <!-- 리뷰 카드 3 -->
+        <div class="review-card slide-target slide-left mobile-delete">
+        <img src="img/review/14.jpg" alt="리뷰 이미지" class="review-img" />
+        <div class="review-content">
+            <div class="stars">★★★★★</div>
+            <p>
+                요즘 까르보불닭이랑 육회 같이 먹는 조합 유행이라길래
+                먹어보려고 한번 시켜봤는데… 진짜 미쳤어요 😋
+                육회 상태 완전 신선하고 오동통해서 식감 대박!
+                잡내도 전혀 없고 그냥 그 자체로도 맛있는데,
+                까르보불닭이랑 비벼 먹으니까
+                단짠+매콤+고소 조합이 완전 찰떡이에요.
+
+                이 조합 안 해본 사람 꼭 해보세요. 진심 강추!                
+            </p>
+        </div>
+        </div>
+
+    </div>
+    </section>
+
+
+
+
+    <!-- 인테리어 디자인 -->
+    <section class="section interior-section" id="interior-section">
+    <div class="interior-content">
+        <div class="interior-text mobile-left">
+        <h2 class="slide-target slide-left">
+            정직한 신선함, <br>
+            <img src="img/logo_all.png" alt="으뜸육회" class="logo-img"/>
+        </h2>
+        <p class="desc">
+            으뜸육회는 "신선함이 곧 맛의 시작"이라는 철학을 바탕으로 
+            매일 최상의 육류만을 엄선하여 손님께 제공합니다.
+            육회와 뭉티기, 생차돌 사시미 등 
+            오직 정직한 재료와 손질로 완성되는 한 접시는,
+            고기의 참맛을 아는 분들이 다시 찾는 이유입니다.<br><br>
+
+            대구에서 시작된 으뜸육회는 남녀노소 누구나 믿고 즐길 수 있는 맛을 위해 
+            위생, 품질, 정성, 그리고 진심을 기본으로 합니다. 
+            정갈한 밑반찬부터 술과 함께 즐기기 좋은 안주 구성까지, 
+            한 끼 식사이자 소중한 모임의 중심이 되는 음식으로 보답하겠습니다.<br><br>
+
+            맛있게 먹고 기분 좋게 돌아갈 수 있는 곳, <br>
+            고기 맛에 진심인 사람들의 단골집, <br>
+            으뜸육회입니다. <br>
+        </p>
+        </div>
+
+        <div class="interior-slider swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="img/interrior/1.jpg" alt="현장사진1"></div>
+            <div class="swiper-slide"><img src="img/offline/1.jpg" alt="현장사진10"></div>
+            <div class="swiper-slide"><img src="img/interrior/2.jpg" alt="현장사진2"></div>
+            <div class="swiper-slide"><img src="img/offline/2.jpg" alt="현장사진9"></div>
+            <div class="swiper-slide"><img src="img/offline/3.jpg" alt="현장사진8"></div>
+            <div class="swiper-slide"><img src="img/interrior/4.jpg" alt="현장사진4"></div>
+            <div class="swiper-slide"><img src="img/interrior/5.jpg" alt="현장사진5"></div>
+            <div class="swiper-slide"><img src="img/offline/4.jpg" alt="현장사진6"></div>
+            <div class="swiper-slide"><img src="img/offline/5.jpg" alt="현장사진7"></div>
+
+
+
+        </div>
+        <div class="swiper-pagination"></div>
+        </div>
+    </div>
+    </section>
+
+
+    <!-- 가맹가입절차 -->
+    <section id="enter", class="section enter-section">
+        <div class="mobile-left">
+        <h2 class="enter-title fade-target">
+            <img src="img/logo_all.png" alt="으뜸육회" class="logo-img"/>
+            신규가맹절차
+        </h2>
+        
+        <p>
+            저희는 다년간의 경험을 바탕으로 <br>
+            상권분석부터 사후관리까지 본사에서 모두 책임지고 있습니다.
+        </p>
+        <div class="enter-table"><img src="img/enter2.png" alt="가입절차 이미지"></div>
+        </div>
+    </section>    
+
+
+    <!-- 창업문의 -->
+    <section id="contact-section" class="section contact-section">
+    <h2 class="mobile-left fade-target"><img src="img/logo_all.png" alt="으뜸육회" class="logo-img"/> 창업문의</h2>
+    <form id="inquiry-form">
+        
+
+        <label>성함*</label>
+        <input type="text" name="name" required />
+
+        <label>전화번호*</label>
+        <input type="text" name="phone" required placeholder="010-1234-5678" />
+
+        <label>이메일*</label>
+        <input type="email" name="email" required placeholder="example@example.com" />
+
+        <div class="radio-group">
+            <label>점포유무*</label>
+            <label><input type="radio" name="store" value="있음" required /> 있음</label>
+            <label><input type="radio" name="store" value="없음" /> 없음</label>
+        </div>
+
+        <label>창업 희망 지역*</label>
+        <input type="text" name="region" required />
+
+        <label>창업 희망 비용*</label>
+        <input type="text" name="budget" required />
+
+        <label>인지경로*</label>
+        <select name="source" required>
+            <option value="">인지경로 선택</option>
+            <option value="SNS">SNS</option>
+            <option value="지인소개">지인소개</option>
+            <option value="검색">검색</option>
+        </select>
+
+        <div class="radio-group">
+            <label>연령대*</label>
+            <label><input type="radio" name="age" value="20대" required /> 20대</label>
+            <label><input type="radio" name="age" value="30대" /> 30대</label>
+            <label><input type="radio" name="age" value="40대" /> 40대</label>
+            <label><input type="radio" name="age" value="50대" /> 50대</label>
+        </div>
+
+        <div class="radio-group">
+            <label>프렌차이즈 경험*</label>
+            <label><input type="radio" name="franchise" value="있음" required /> 있음</label>
+            <label><input type="radio" name="franchise" value="없음" /> 없음</label>
+        </div>
+
+        <label>제목*</label>
+        <input type="text" name="subject" required />
+
+        <label>내용*</label>
+        <textarea name="message" required></textarea>
+
+        <div class="agree-policy">
+            <input type="checkbox" id="agree" />
+            <label for="agree">개인정보취급방침에 동의합니다.</label>
+        </div>
+
+        <button type="submit" id="submitBtn">창업문의 바로신청 GO</button>
+    </form>
+    </section>
+
+
+
+    <!-- ====== Footer ====== -->
+    <footer class="site-footer">
+    <!-- 상단 링크 -->
+
+    <!-- 메인 콘텐츠 -->
+    <div class="footer-content">
+        <!-- 왼쪽 회사 정보 -->
+        <div class="footer-info">
+        <p>
+            주식회사 으뜸에프앤비&nbsp;&nbsp; 대표이사 이영섭&nbsp;&nbsp; <br>
+            대구광역시 달서구 월배로73길50 1,2층&nbsp;&nbsp; <br>
+            사업자등록번호 436-88-03545&nbsp;&nbsp; <br>
+            Tel. 010-9340-7630&nbsp;&nbsp;
+            Email: wkenwken20@naver.com
+        </p>
+        <p>COPYRIGHT © 으뜸육회. All Rights Reserved.</p>
+        </div>
+
+
+
+        <!-- 오른쪽 가맹문의 -->
+        <div class="footer-contact">
+        <a href="#contact-section" class="franchise-inquiry"><span class="mobile-delte">가맹문의</span> 1555-0179</a>
+        </div>
+    </div>
+    </footer>
+
+
+
+
+
+
+    <!-- 경고는 뜨지만 실제 작동하는 유일한 CDN 방식 -->
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+    (function() {
+        emailjs.init('C8ofXNuRUsyFrTESn');  // 본인의 PUBLIC KEY
+    })();
+    </script>
+    <script src="js/contact.js"></script>
+
+
+
+    <script src="js/popup.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/slider.js"></script>
+    <script src="js/bills.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="js/interrior.js"></script>
+    <script src="js/popup2.js"></script>
+    <script src="js/sliding.js"></script>
+    <script src="js/mobile-animation.js"></script>
+
+
+</body>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const img = document.querySelector(".enter-table img");
+    if (window.innerWidth <= 600 && img) {
+      img.src = "img/enter3.png";
+    }
+  });
+</script>
+
+
+</html>
